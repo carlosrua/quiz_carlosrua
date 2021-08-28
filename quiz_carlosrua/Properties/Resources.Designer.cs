@@ -73,6 +73,16 @@ namespace quiz_carlosrua.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6GMLIJTQ6JCGLIA2FZOQWIHJQA1 {
+            get {
+                object obj = ResourceManager.GetObject("6GMLIJTQ6JCGLIA2FZOQWIHJQA1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap battlefield {
             get {
                 object obj = ResourceManager.GetObject("battlefield", resourceCulture);

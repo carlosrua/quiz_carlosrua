@@ -31,18 +31,24 @@ namespace quiz_carlosrua
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(battlefield));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.direccion = new System.Windows.Forms.Label();
+            this.text1 = new System.Windows.Forms.TextBox();
+            this.fecha = new System.Windows.Forms.Label();
+            this.Time1 = new System.Windows.Forms.DateTimePicker();
+            this.combo1 = new System.Windows.Forms.ComboBox();
+            this.consola = new System.Windows.Forms.Label();
+            this.ListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.DLC = new System.Windows.Forms.Label();
+            this.Box1 = new System.Windows.Forms.CheckBox();
+            this.Box2 = new System.Windows.Forms.CheckBox();
+            this.USUARIOS = new System.Windows.Forms.Label();
+            this.rtxtResults = new System.Windows.Forms.RichTextBox();
+            this.transacciones = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -54,50 +60,52 @@ namespace quiz_carlosrua
             this.pictureBox1.Size = new System.Drawing.Size(1044, 197);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label1
+            // direccion
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Blue;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(227, 202);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Direccion De Pago:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.direccion.AutoSize = true;
+            this.direccion.BackColor = System.Drawing.Color.Blue;
+            this.direccion.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.direccion.ForeColor = System.Drawing.Color.Black;
+            this.direccion.Location = new System.Drawing.Point(227, 203);
+            this.direccion.Name = "direccion";
+            this.direccion.Size = new System.Drawing.Size(195, 27);
+            this.direccion.TabIndex = 1;
+            this.direccion.Text = "Direccion De Pago:";
+            this.direccion.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // text1
             // 
-            this.textBox1.Location = new System.Drawing.Point(232, 233);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 22);
-            this.textBox1.TabIndex = 2;
+            this.text1.Location = new System.Drawing.Point(232, 233);
+            this.text1.Name = "text1";
+            this.text1.Size = new System.Drawing.Size(224, 22);
+            this.text1.TabIndex = 2;
+            this.text1.TextChanged += new System.EventHandler(this.text1_TextChanged);
             // 
-            // label2
+            // fecha
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Blue;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(227, 270);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 27);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Fecha De Pago:";
+            this.fecha.AutoSize = true;
+            this.fecha.BackColor = System.Drawing.Color.Blue;
+            this.fecha.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fecha.Location = new System.Drawing.Point(227, 270);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(159, 27);
+            this.fecha.TabIndex = 3;
+            this.fecha.Text = "Fecha De Pago:";
             // 
-            // dateTimePicker1
+            // Time1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(232, 301);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
-            this.dateTimePicker1.TabIndex = 4;
+            this.Time1.Location = new System.Drawing.Point(232, 301);
+            this.Time1.Name = "Time1";
+            this.Time1.Size = new System.Drawing.Size(265, 22);
+            this.Time1.TabIndex = 4;
             // 
-            // comboBox1
+            // combo1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.combo1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo1.FormattingEnabled = true;
+            this.combo1.Items.AddRange(new object[] {
             "RADIO",
             "PS3",
             "PS4",
@@ -105,84 +113,133 @@ namespace quiz_carlosrua
             "XBOX 360",
             "XBOX ONE",
             "PC"});
-            this.comboBox1.Location = new System.Drawing.Point(232, 370);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 36);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.combo1.Location = new System.Drawing.Point(232, 370);
+            this.combo1.Name = "combo1";
+            this.combo1.Size = new System.Drawing.Size(154, 36);
+            this.combo1.TabIndex = 5;
+            this.combo1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label3
+            // consola
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Blue;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(227, 340);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 27);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Consola:";
+            this.consola.AutoSize = true;
+            this.consola.BackColor = System.Drawing.Color.Blue;
+            this.consola.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consola.Location = new System.Drawing.Point(227, 340);
+            this.consola.Name = "consola";
+            this.consola.Size = new System.Drawing.Size(94, 27);
+            this.consola.TabIndex = 6;
+            this.consola.Text = "Consola:";
             // 
-            // checkedListBox1
+            // ListBox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.ListBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ListBox1.FormattingEnabled = true;
+            this.ListBox1.Items.AddRange(new object[] {
             "China Rising",
             "Second Assault",
             "Naval Strike",
             "Dragon\'s Teeth",
             "Final Stand"});
-            this.checkedListBox1.Location = new System.Drawing.Point(232, 439);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(187, 89);
-            this.checkedListBox1.TabIndex = 7;
+            this.ListBox1.Location = new System.Drawing.Point(232, 439);
+            this.ListBox1.Name = "ListBox1";
+            this.ListBox1.Size = new System.Drawing.Size(187, 89);
+            this.ListBox1.TabIndex = 7;
             // 
-            // label4
+            // DLC
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Blue;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(227, 409);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 27);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "DLC:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.DLC.AutoSize = true;
+            this.DLC.BackColor = System.Drawing.Color.Blue;
+            this.DLC.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DLC.Location = new System.Drawing.Point(227, 409);
+            this.DLC.Name = "DLC";
+            this.DLC.Size = new System.Drawing.Size(55, 27);
+            this.DLC.TabIndex = 8;
+            this.DLC.Text = "DLC:";
+            this.DLC.Click += new System.EventHandler(this.label4_Click);
             // 
-            // checkBox1
+            // Box1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(649, 235);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(45, 24);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "SI";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.Box1.AutoSize = true;
+            this.Box1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Box1.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Box1.Location = new System.Drawing.Point(649, 235);
+            this.Box1.Name = "Box1";
+            this.Box1.Size = new System.Drawing.Size(45, 24);
+            this.Box1.TabIndex = 9;
+            this.Box1.Text = "SI";
+            this.Box1.UseVisualStyleBackColor = false;
             // 
-            // checkBox2
+            // Box2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(649, 263);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(55, 24);
-            this.checkBox2.TabIndex = 10;
-            this.checkBox2.Text = "NO";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.Box2.AutoSize = true;
+            this.Box2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Box2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Box2.Location = new System.Drawing.Point(649, 263);
+            this.Box2.Name = "Box2";
+            this.Box2.Size = new System.Drawing.Size(55, 24);
+            this.Box2.TabIndex = 10;
+            this.Box2.Text = "NO";
+            this.Box2.UseVisualStyleBackColor = false;
+            this.Box2.CheckedChanged += new System.EventHandler(this.Box2_CheckedChanged);
             // 
-            // label5
+            // USUARIOS
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Blue;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(649, 193);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 27);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Usuarios Premiun:";
+            this.USUARIOS.AutoSize = true;
+            this.USUARIOS.BackColor = System.Drawing.Color.Blue;
+            this.USUARIOS.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.USUARIOS.Location = new System.Drawing.Point(649, 193);
+            this.USUARIOS.Name = "USUARIOS";
+            this.USUARIOS.Size = new System.Drawing.Size(185, 27);
+            this.USUARIOS.TabIndex = 11;
+            this.USUARIOS.Text = "Usuarios Premiun:";
+            // 
+            // rtxtResults
+            // 
+            this.rtxtResults.Location = new System.Drawing.Point(649, 354);
+            this.rtxtResults.Name = "rtxtResults";
+            this.rtxtResults.Size = new System.Drawing.Size(210, 96);
+            this.rtxtResults.TabIndex = 12;
+            this.rtxtResults.Text = "";
+            // 
+            // transacciones
+            // 
+            this.transacciones.AutoSize = true;
+            this.transacciones.BackColor = System.Drawing.Color.Blue;
+            this.transacciones.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transacciones.ForeColor = System.Drawing.Color.Black;
+            this.transacciones.Location = new System.Drawing.Point(649, 324);
+            this.transacciones.Name = "transacciones";
+            this.transacciones.Size = new System.Drawing.Size(150, 27);
+            this.transacciones.TabIndex = 13;
+            this.transacciones.Text = "Transacciones:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(649, 467);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 39);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Añadir";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(753, 467);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(106, 39);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Reporte";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // battlefield
             // 
@@ -190,22 +247,27 @@ namespace quiz_carlosrua
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::quiz_carlosrua.Properties.Resources._6GMLIJTQ6JCGLIA2FZOQWIHJQA;
             this.ClientSize = new System.Drawing.Size(1101, 581);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.transacciones);
+            this.Controls.Add(this.rtxtResults);
+            this.Controls.Add(this.USUARIOS);
+            this.Controls.Add(this.Box2);
+            this.Controls.Add(this.Box1);
+            this.Controls.Add(this.DLC);
+            this.Controls.Add(this.ListBox1);
+            this.Controls.Add(this.consola);
+            this.Controls.Add(this.combo1);
+            this.Controls.Add(this.Time1);
+            this.Controls.Add(this.fecha);
+            this.Controls.Add(this.text1);
+            this.Controls.Add(this.direccion);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "battlefield";
             this.Text = "battlefield epic game";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,17 +276,22 @@ namespace quiz_carlosrua
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label direccion;
+        private System.Windows.Forms.TextBox text1;
+        private System.Windows.Forms.Label fecha;
+        private System.Windows.Forms.DateTimePicker Time1;
+        private System.Windows.Forms.ComboBox combo1;
+        private System.Windows.Forms.Label consola;
+        private System.Windows.Forms.CheckedListBox ListBox1;
+        private System.Windows.Forms.Label DLC;
+        private System.Windows.Forms.CheckBox Box1;
+        private System.Windows.Forms.CheckBox Box2;
+        private System.Windows.Forms.Label USUARIOS;
+        private System.Windows.Forms.RichTextBox rtxtResults;
+        private System.Windows.Forms.Label transacciones;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
 
